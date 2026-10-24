@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Merge | Jeddah & Riyadh | Spatial Design & Brand Environments</title>
+    <title>Studio Merge | Brand Palette Explorations</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,11 +13,9 @@
                 extend: {
                     colors: {
                         studio: {
-                            // Primary Colors
                             espresso: '#432f2d',
                             iceblue: '#c1dbe9',
                             butter: '#fdefb4',
-                            // Secondary Colors
                             cream: '#fcf6ea',
                             beige: '#d9d2c2',
                             lightgrey: '#e8e4de',
@@ -36,64 +34,59 @@
         }
     </script>
 </head>
-<body class="bg-studio-cream text-studio-espresso font-sans min-h-screen flex flex-col selection:bg-studio-iceblue selection:text-studio-espresso">
+<body class="bg-stone-900 text-stone-100 font-sans selection:bg-studio-iceblue selection:text-studio-espresso">
 
-    <!-- Header / Location bar -->
-    <header class="w-full bg-studio-cream py-6 px-6 sm:px-12 border-b border-studio-lightgrey">
-        <div class="max-w-7xl mx-auto flex justify-between items-center text-xs tracking-widest text-studio-muted">
-            <p class="uppercase font-medium">Jeddah • Riyadh</p>
-            <p class="font-medium dir-rtl">جدة • الرياض</p>
+    <!-- Sticky Navigation / Palette Indicator -->
+    <nav class="sticky top-0 z-50 bg-stone-950/90 backdrop-blur border-b border-stone-800 py-3 px-6 text-xs text-stone-400 flex justify-between items-center">
+        <span class="font-bold tracking-widest text-stone-200">STUDIO MERGE — PALETTE EXPLORATIONS</span>
+        <span class="hidden sm:inline">Scroll down to view layout in alternate brand colorways</span>
+    </nav>
+
+    <!-- VARIATION 01: Warm Cream & Espresso (Original) -->
+    <div class="relative border-b-8 border-stone-900">
+        <div class="absolute top-4 right-6 bg-studio-espresso text-studio-cream text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full z-10 shadow">
+            Option 01: Warm Cream & Espresso
         </div>
-    </header>
-
-    <!-- Hero Section: Prominent Studio Brand Identity -->
-    <main class="flex-grow flex flex-col justify-center py-16 px-6 sm:px-12">
-        <div class="max-w-6xl mx-auto w-full text-center space-y-10">
-            
-            <!-- Hero Brand Mark -->
-            <div class="space-y-3">
-                <p class="text-xs uppercase tracking-[0.4em] text-studio-muted font-medium">Creative Consultancy</p>
-                <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold tracking-[0.3em] text-studio-espresso uppercase pl-[0.3em]">
-                    STUDIO MERGE
-                </h1>
-                <p class="text-sm uppercase tracking-[0.2em] text-studio-muted font-light pt-2">
-                    Spatial Architecture & Brand Identity
-                </p>
-            </div>
-
-            <!-- Core Statement -->
-            <p class="max-w-2xl mx-auto text-base sm:text-xl text-studio-espresso font-light leading-relaxed pt-4">
-                Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
-            </p>
-
-            <!-- Direct Contact CTA -->
-            <div class="pt-4">
-                <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-white font-medium text-xs uppercase tracking-[0.3em] px-10 py-4 rounded-full hover:bg-studio-espresso transition-colors duration-300 shadow-sm">
-                    Inquire Directly
-                </a>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Brand Palette Showcase Section -->
-    <section class="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 border-t border-studio-lightgrey">
-        <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
-            <div>
-                <p class="text-xs uppercase tracking-[0.25em] text-studio-muted">Identity System</p>
-                <h2 class="text-xl sm:text-2xl font-light text-studio-espresso">Brand Color Palette</h2>
-            </div>
-            <p class="text-xs text-studio-muted tracking-wider">Curated Tones & Material Expressions</p>
-        </div>
-
-        <!-- Primary Colors -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div class="bg-studio-espresso text-studio-cream p-6 rounded-xl flex flex-col justify-between h-32 shadow-sm">
-                <span class="text-xs uppercase tracking-widest opacity-80">Primary / Espresso</span>
-                <span class="font-mono text-sm">#432F2D</span>
-            </div>
-            <div class="bg-studio-iceblue text-studio-espresso p-6 rounded-xl flex flex-col justify-between h-32 shadow-sm">
-                <span class="text-xs uppercase tracking-widest opacity-80">Primary / Ice Blue</span>
-                <span class="font-mono text-sm">#C1DBE9</span>
-            </div>
-            <div class="bg-studio-butter text-studio-espresso p-6 rounded-xl flex flex-col justify
+        <div class="bg-studio-cream text-studio-espresso min-h-screen flex flex-col">
+            <!-- Header -->
+            <header class="w-full py-6 px-6 sm:px-12 border-b border-studio-lightgrey">
+                <div class="max-w-7xl mx-auto flex justify-between items-center text-xs tracking-widest text-studio-muted">
+                    <p class="uppercase font-medium">Jeddah • Riyadh</p>
+                    <p class="font-medium dir-rtl">جدة • الرياض</p>
+                </div>
+            </header>
+            <!-- Hero -->
+            <main class="flex-grow flex flex-col justify-center py-16 px-6 sm:px-12">
+                <div class="max-w-6xl mx-auto w-full text-center space-y-8">
+                    <div class="space-y-3">
+                        <p class="text-xs uppercase tracking-[0.4em] text-studio-muted font-medium">Creative Consultancy</p>
+                        <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold tracking-[0.3em] text-studio-espresso uppercase pl-[0.3em]">
+                            STUDIO MERGE
+                        </h1>
+                        <p class="text-sm uppercase tracking-[0.2em] text-studio-muted font-light pt-2">
+                            Spatial Architecture & Brand Identity
+                        </p>
+                    </div>
+                    <p class="max-w-2xl mx-auto text-base sm:text-xl text-studio-espresso font-light leading-relaxed pt-2">
+                        Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+                    </p>
+                    <div class="pt-4">
+                        <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-white font-medium text-xs uppercase tracking-[0.3em] px-10 py-4 rounded-full hover:bg-studio-espresso transition-colors duration-300">
+                            Inquire Directly
+                        </a>
+                    </div>
+                </div>
+            </main>
+            <!-- Practice Areas -->
+            <section class="w-full max-w-7xl mx-auto px-6 sm:px-12 pb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-2xl border border-studio-lightgrey">
+                    <p class="text-[10px] uppercase tracking-widest text-studio-muted mb-2">01 / Architectural</p>
+                    <h3 class="text-xl font-medium text-studio-espresso mb-2">Spatial Design</h3>
+                    <p class="text-xs text-studio-muted leading-relaxed">Interior architecture and physical environments across KSA.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-studio-lightgrey">
+                    <p class="text-[10px] uppercase tracking-widest text-studio-muted mb-2">02 / Visualization</p>
+                    <h3 class="text-xl font-medium text-studio-espresso mb-2">3D Rendering</h3>
+                    <p class="text-xs text-studio-muted leading-relaxed">Photorealistic 3D rendering and spatial atmosphere conceptualization.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-studio-
