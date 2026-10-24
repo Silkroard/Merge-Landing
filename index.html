@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Merge | Brand Palette Explorations</title>
+    <title>STUDIO MERGE — Brand Palette Showcase</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,81 +12,336 @@
             theme: {
                 extend: {
                     colors: {
-                        studio: {
-                            espresso: '#432f2d',
-                            iceblue: '#c1dbe9',
-                            butter: '#fdefb4',
-                            cream: '#fcf6ea',
-                            beige: '#d9d2c2',
-                            lightgrey: '#e8e4de',
-                            oxblood: '#5a1d24',
-                            pink: '#fce7f0',
-                            softpink: '#ffd3e0',
-                            olive: '#52451b',
-                            muted: '#7a706b'
-                        }
+                        espresso: '#432F2D',
+                        cream: '#FCF6EA',
+                        iceblue: '#C1DBE9',
+                        butter: '#FDEFB4',
+                        olive: '#52451B',
+                        oxblood: '#5A1D24',
+                        softpink: '#FFD3E0',
+                        lightgrey: '#E8E4DE',
+                        beige: '#D9D2C2'
                     },
                     fontFamily: {
-                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Enable CSS scroll snapping for full-screen landing page comparison */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .scroll-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        .landing-section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 100vh;
+            width: 100%;
+        }
+        /* Custom sleek scrollbar */
+        .scroll-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #1c1917;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #52525b;
+            border-radius: 3px;
+        }
+    </style>
 </head>
-<body class="bg-stone-900 text-stone-100 font-sans selection:bg-studio-iceblue selection:text-studio-espresso">
+<body class="bg-black font-sans antialiased text-stone-100 selection:bg-amber-200 selection:text-stone-900">
 
-    <!-- Sticky Navigation / Palette Indicator -->
-    <nav class="sticky top-0 z-50 bg-stone-950/90 backdrop-blur border-b border-stone-800 py-3 px-6 text-xs text-stone-400 flex justify-between items-center">
-        <span class="font-bold tracking-widest text-stone-200">STUDIO MERGE — PALETTE EXPLORATIONS</span>
-        <span class="hidden sm:inline">Scroll down to view layout in alternate brand colorways</span>
-    </nav>
+    <!-- Floating Navigation Switcher Bar -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-xl bg-black/85 backdrop-blur-md border border-white/10 rounded-full px-3 py-2 shadow-2xl flex items-center justify-between gap-1 text-[11px] sm:text-xs font-medium tracking-wider">
+        <a href="#option-1" class="flex-1 text-center py-2 px-2 rounded-full transition-all duration-300 hover:bg-white/15 text-stone-200 active:scale-95">
+            01 Cream
+        </a>
+        <a href="#option-2" class="flex-1 text-center py-2 px-2 rounded-full transition-all duration-300 hover:bg-white/15 text-stone-200 active:scale-95">
+            02 Espresso
+        </a>
+        <a href="#option-3" class="flex-1 text-center py-2 px-2 rounded-full transition-all duration-300 hover:bg-white/15 text-stone-200 active:scale-95">
+            03 Olive
+        </a>
+        <a href="#option-4" class="flex-1 text-center py-2 px-2 rounded-full transition-all duration-300 hover:bg-white/15 text-stone-200 active:scale-95">
+            04 Butter
+        </a>
+    </div>
 
-    <!-- VARIATION 01: Warm Cream & Espresso (Original) -->
-    <div class="relative border-b-8 border-stone-900">
-        <div class="absolute top-4 right-6 bg-studio-espresso text-studio-cream text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full z-10 shadow">
-            Option 01: Warm Cream & Espresso
-        </div>
-        <div class="bg-studio-cream text-studio-espresso min-h-screen flex flex-col">
-            <!-- Header -->
-            <header class="w-full py-6 px-6 sm:px-12 border-b border-studio-lightgrey">
-                <div class="max-w-7xl mx-auto flex justify-between items-center text-xs tracking-widest text-studio-muted">
-                    <p class="uppercase font-medium">Jeddah • Riyadh</p>
-                    <p class="font-medium dir-rtl">جدة • الرياض</p>
-                </div>
+    <!-- Main Scroll Container -->
+    <div class="scroll-container">
+
+        <!-- ================================================================= -->
+        <!-- VARIATION 01: CREAM BACKGROUND (#FCF6EA) + ESPRESSO LOGO/TEXT -->
+        <!-- ================================================================= -->
+        <section id="option-1" class="landing-section bg-cream text-espresso flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-espresso/10">
+            <!-- Top Header -->
+            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
+                <span class="font-medium text-espresso/70 uppercase">Jeddah • Riyadh &nbsp;|&nbsp; جدة • الرياض</span>
+                <span class="bg-espresso/10 border border-espresso/20 text-espresso px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
+                    Option 01 • Cream (#FCF6EA)
+                </span>
             </header>
-            <!-- Hero -->
-            <main class="flex-grow flex flex-col justify-center py-16 px-6 sm:px-12">
-                <div class="max-w-6xl mx-auto w-full text-center space-y-8">
-                    <div class="space-y-3">
-                        <p class="text-xs uppercase tracking-[0.4em] text-studio-muted font-medium">Creative Consultancy</p>
-                        <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold tracking-[0.3em] text-studio-espresso uppercase pl-[0.3em]">
-                            STUDIO MERGE
-                        </h1>
-                        <p class="text-sm uppercase tracking-[0.2em] text-studio-muted font-light pt-2">
-                            Spatial Architecture & Brand Identity
-                        </p>
-                    </div>
-                    <p class="max-w-2xl mx-auto text-base sm:text-xl text-studio-espresso font-light leading-relaxed pt-2">
-                        Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+
+            <!-- Main Content Area -->
+            <main class="w-full max-w-4xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+                <div class="space-y-2">
+                    <p class="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-espresso/60 font-semibold">
+                        Creative Consultancy
                     </p>
-                    <div class="pt-4">
-                        <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-white font-medium text-xs uppercase tracking-[0.3em] px-10 py-4 rounded-full hover:bg-studio-espresso transition-colors duration-300">
-                            Inquire Directly
-                        </a>
+                    <!-- Exact Logo Style matching 1st Bar -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.2em] uppercase text-espresso pl-[0.2em]">
+                        STUDIO MERGE
+                    </h1>
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-espresso/80 font-light pt-1">
+                        Spatial Architecture & Brand Identity
+                    </p>
+                </div>
+
+                <p class="max-w-xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-espresso/90">
+                    Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+                </p>
+
+                <div>
+                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-espresso text-cream font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-oxblood hover:text-white transition-colors duration-300 shadow-md">
+                        Inquire Directly
+                    </a>
+                </div>
+
+                <!-- Practice Cards -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
+                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">01 / Spatial</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">Spatial Design</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Interior architecture and physical environments across KSA.</p>
+                    </div>
+                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">02 / Visualization</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">3D Rendering</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Photorealistic 3D rendering and spatial atmospheres.</p>
+                    </div>
+                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">03 / Identity</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">Brand Systems</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Visual identities tailored for luxury & lifestyle entities.</p>
                     </div>
                 </div>
             </main>
-            <!-- Practice Areas -->
-            <section class="w-full max-w-7xl mx-auto px-6 sm:px-12 pb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-2xl border border-studio-lightgrey">
-                    <p class="text-[10px] uppercase tracking-widest text-studio-muted mb-2">01 / Architectural</p>
-                    <h3 class="text-xl font-medium text-studio-espresso mb-2">Spatial Design</h3>
-                    <p class="text-xs text-studio-muted leading-relaxed">Interior architecture and physical environments across KSA.</p>
+
+            <!-- Footer -->
+            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-espresso/60 pb-2 gap-2">
+                <p>© 2026 STUDIO MERGE. All rights reserved.</p>
+                <p>@studiomerge_ • hello@thestudiomerge.com</p>
+            </footer>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- VARIATION 02: ESPRESSO BACKGROUND (#432F2D) + CREAM/WHITE TEXT -->
+        <!-- ================================================================= -->
+        <section id="option-2" class="landing-section bg-espresso text-cream flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cream/10">
+            <!-- Top Header -->
+            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
+                <span class="font-medium text-cream/70 uppercase">Jeddah • Riyadh &nbsp;|&nbsp; جدة • الرياض</span>
+                <span class="bg-cream/10 border border-cream/20 text-cream px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
+                    Option 02 • Espresso (#432F2D)
+                </span>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="w-full max-w-4xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+                <div class="space-y-2">
+                    <p class="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-iceblue font-semibold">
+                        Creative Consultancy
+                    </p>
+                    <!-- Exact Logo Style matching 2nd Bar -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.2em] uppercase text-cream pl-[0.2em]">
+                        STUDIO MERGE
+                    </h1>
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-cream/80 font-light pt-1">
+                        Spatial Architecture & Brand Identity
+                    </p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-studio-lightgrey">
-                    <p class="text-[10px] uppercase tracking-widest text-studio-muted mb-2">02 / Visualization</p>
-                    <h3 class="text-xl font-medium text-studio-espresso mb-2">3D Rendering</h3>
-                    <p class="text-xs text-studio-muted leading-relaxed">Photorealistic 3D rendering and spatial atmosphere conceptualization.</p>
+
+                <p class="max-w-xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cream/90">
+                    Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+                </p>
+
+                <div>
+                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-iceblue text-espresso font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-butter transition-colors duration-300 shadow-md">
+                        Inquire Directly
+                    </a>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-studio-
+
+                <!-- Practice Cards -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
+                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">01 / Spatial</p>
+                        <h3 class="text-base font-medium text-cream mb-1">Spatial Design</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Interior architecture and physical environments across KSA.</p>
+                    </div>
+                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">02 / Visualization</p>
+                        <h3 class="text-base font-medium text-cream mb-1">3D Rendering</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Photorealistic 3D rendering and spatial atmospheres.</p>
+                    </div>
+                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">03 / Identity</p>
+                        <h3 class="text-base font-medium text-cream mb-1">Brand Systems</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Visual identities tailored for luxury & lifestyle entities.</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cream/60 pb-2 gap-2">
+                <p>© 2026 STUDIO MERGE. All rights reserved.</p>
+                <p>@studiomerge_ • hello@thestudiomerge.com</p>
+            </footer>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- VARIATION 03: OILY OLIVE BACKGROUND (#52451B) + ICE BLUE LOGO -->
+        <!-- ================================================================= -->
+        <section id="option-3" class="landing-section bg-olive text-cream flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cream/10">
+            <!-- Top Header -->
+            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
+                <span class="font-medium text-cream/70 uppercase">Jeddah • Riyadh &nbsp;|&nbsp; جدة • الرياض</span>
+                <span class="bg-cream/10 border border-cream/20 text-cream px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
+                    Option 03 • Oily Olive (#52451B)
+                </span>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="w-full max-w-4xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+                <div class="space-y-2">
+                    <p class="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-butter font-semibold">
+                        Creative Consultancy
+                    </p>
+                    <!-- Exact Logo Accent matching 3rd Bar (Olive BG + Ice Blue Logo) -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.2em] uppercase text-iceblue pl-[0.2em]">
+                        STUDIO MERGE
+                    </h1>
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-cream/80 font-light pt-1">
+                        Spatial Architecture & Brand Identity
+                    </p>
+                </div>
+
+                <p class="max-w-xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cream/90">
+                    Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+                </p>
+
+                <div>
+                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-butter text-olive font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-cream transition-colors duration-300 shadow-md">
+                        Inquire Directly
+                    </a>
+                </div>
+
+                <!-- Practice Cards -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
+                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">01 / Spatial</p>
+                        <h3 class="text-base font-medium text-cream mb-1">Spatial Design</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Interior architecture and physical environments across KSA.</p>
+                    </div>
+                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">02 / Visualization</p>
+                        <h3 class="text-base font-medium text-cream mb-1">3D Rendering</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Photorealistic 3D rendering and spatial atmospheres.</p>
+                    </div>
+                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">03 / Identity</p>
+                        <h3 class="text-base font-medium text-cream mb-1">Brand Systems</h3>
+                        <p class="text-xs text-cream/70 leading-relaxed">Visual identities tailored for luxury & lifestyle entities.</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cream/60 pb-2 gap-2">
+                <p>© 2026 STUDIO MERGE. All rights reserved.</p>
+                <p>@studiomerge_ • hello@thestudiomerge.com</p>
+            </footer>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- VARIATION 04: SOFT BUTTER YELLOW BACKGROUND (#FDEFB4) + ESPRESSO LOGO -->
+        <!-- ================================================================= -->
+        <section id="option-4" class="landing-section bg-butter text-espresso flex flex-col justify-between py-6 px-6 sm:px-12 relative">
+            <!-- Top Header -->
+            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
+                <span class="font-medium text-espresso/70 uppercase">Jeddah • Riyadh &nbsp;|&nbsp; جدة • الرياض</span>
+                <span class="bg-espresso/10 border border-espresso/20 text-espresso px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
+                    Option 04 • Butter (#FDEFB4)
+                </span>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="w-full max-w-4xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+                <div class="space-y-2">
+                    <p class="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-oxblood font-semibold">
+                        Creative Consultancy
+                    </p>
+                    <!-- Exact Logo Style matching 4th Bar -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.2em] uppercase text-espresso pl-[0.2em]">
+                        STUDIO MERGE
+                    </h1>
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-espresso/80 font-light pt-1">
+                        Spatial Architecture & Brand Identity
+                    </p>
+                </div>
+
+                <p class="max-w-xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-espresso/90">
+                    Where spatial design, architectural visualization, and tangible brand identities seamlessly unite.
+                </p>
+
+                <div>
+                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-espresso text-butter font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-oxblood hover:text-white transition-colors duration-300 shadow-md">
+                        Inquire Directly
+                    </a>
+                </div>
+
+                <!-- Practice Cards -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
+                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">01 / Spatial</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">Spatial Design</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Interior architecture and physical environments across KSA.</p>
+                    </div>
+                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">02 / Visualization</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">3D Rendering</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Photorealistic 3D rendering and spatial atmospheres.</p>
+                    </div>
+                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
+                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">03 / Identity</p>
+                        <h3 class="text-base font-medium text-espresso mb-1">Brand Systems</h3>
+                        <p class="text-xs text-espresso/70 leading-relaxed">Visual identities tailored for luxury & lifestyle entities.</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-espresso/60 pb-2 gap-2">
+                <p>© 2026 STUDIO MERGE. All rights reserved.</p>
+                <p>@studiomerge_ • hello@thestudiomerge.com</p>
+            </footer>
+        </section>
+
+    </div>
+
+</body>
+</html>
