@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Art Studio | Riyadh & Jeddah | Spatial & 3D Design</title>
+    <!-- Tailwind CSS for mobile-first speed -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            // Primary Colors
+                            espresso: '#432f2d',
+                            iceblue: '#c1dbe9',
+                            butter: '#fdefb4',
+                            // Secondary Colors
+                            oxblood: '#5a1d24',
+                            beige: '#d9d2c2',
+                            cream: '#fcf6ea',
+                            // Logo specific
+                            grey: '#e8e4de',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        logo: ['Futura PT', 'Futura', 'Avenir', 'sans-serif'], // Best substitute for logo geometric style
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-studio-cream text-studio-espresso font-sans min-h-screen flex flex-col selection:bg-studio-iceblue selection:text-studio-espresso">
+
+    <!-- Primary header showing Merge logo visual flow from sheet -->
+    <header class="w-full bg-studio-cream text-studio-espresso py-4 px-6 border-b border-studio-grey">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo area referencing the MERGE typeface from brand sheet -->
+            <div class="flex items-center gap-1 font-logo text-sm font-semibold tracking-[0.6em] uppercase">
+                <span class="text-studio-espresso">M</span>
+                <span class="text-studio-espresso">E</span>
+                <span class="text-studio-espresso">R</span>
+                <span class="text-studio-espresso">G</span>
+                <span class="text-studio-espresso">E</span>
+                <span class="text-studio-muted font-normal tracking-wider normal-case ml-3">/ Art Studio</span>
+            </div>
+            <!-- Arabic Location / Contact -->
+            <div class="text-xs tracking-wider text-right">
+                <p>الرياض، جدة</p>
+                <p>hello@thestudiomerge.com</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero / Introduction Section -->
+    <main class="flex-grow flex items-center justify-center py-20 px-6">
+        <div class="max-w-4xl w-full text-center">
+            <!-- Studio Focus Area from brand sheet concept -->
+            <p class="text-xs uppercase tracking-[0.25em] text-studio-muted mb-6">Consultancy & Design • Riyadh, Saudi Arabia</p>
+            <h1 class="text-4xl md:text-6xl font-logo font-medium tracking-[0.05em] leading-[1.1] mb-8 text-studio-espresso">
+                Merging Vision and Art.<br><span class="italic font-light">Creating Immersive Spatial Experiences.</span>
+            </div>
+            </h1>
+            <p class="max-w-xl mx-auto text-base md:text-lg text-studio-muted font-light leading-relaxed mb-12">
+                A Saudi-based creative consultancy specializing in spatial design, 3D visualization, and digital brand identities. Bringing architectural conceptualization to life with precision and luxury.
+            </p>
+            
+            <!-- Main CTA referencing Oxblood secondary accent -->
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-white font-medium text-xs uppercase tracking-[0.3em] px-10 py-4 rounded-full hover:bg-studio-espresso transition-colors duration-300">
+                Inquire Directly
+            </a>
+        </div>
+    </main>
+
+    <!-- Project Focus / Area Grid with Secondary Colors -->
+    <section class="w-full max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div class="bg-white p-8 rounded-2xl border border-studio-grey/60 group">
+            <p class="text-xs uppercase tracking-wider text-studio-muted mb-3">Architectural</p>
+            <h3 class="text-xl font-medium text-studio-espresso mb-1">Spatial Design</h3>
+            <div class="w-full h-1 bg-studio-iceblue group-hover:bg-studio-butter transition-colors"></div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-studio-grey/60 group">
+            <p class="text-xs uppercase tracking-wider text-studio-muted mb-3">Digital</p>
+            <h3 class="text-xl font-medium text-studio-espresso mb-1">3D Visualization</h3>
+            <div class="w-full h-1 bg-studio-butter group-hover:bg-studio-oxblood transition-colors"></div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-studio-grey/60 group">
+            <p class="text-xs uppercase tracking-wider text-studio-muted mb-3">Identity</p>
+            <h3 class="text-xl font-medium text-studio-espresso mb-1">Digital Brand Identities</h3>
+            <div class="w-full h-1 bg-studio-espresso group-hover:bg-studio-iceblue transition-colors"></div>
+        </div>
+    </section>
+
+    <!-- Subtle footer link to Instagram -->
+    <footer class="w-full bg-white text-studio-muted py-6 px-6 border-t border-studio-grey/60 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs tracking-wider gap-4">
+            <p>© 2026 Studio Merge. all rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/studiomerge_" target="_blank" rel="noopener noreferrer" class="hover:text-studio-espresso">@studiomerge_</a>
+                <span>Riyadh • Jeddah</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
