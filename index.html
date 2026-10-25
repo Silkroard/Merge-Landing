@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MERGE DESIGN STUDIO — Palette Explorations</title>
+    <title>MERGE DESIGN STUDIO | Brand Palette Explorations</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,652 +12,102 @@
             theme: {
                 extend: {
                     colors: {
-                        // Original 4 Colors
-                        espresso: '#432F2D',
-                        cream: '#FCF6EA',
-                        iceblue: '#C1DBE9',
-                        butter: '#FDEFB4',
-                        olive: '#52451B',
-                        // Additional Luxury Palette Colors
-                        oxblood: '#5A1D24',
-                        softpink: '#FFD3E0',
-                        travertine: '#E8E4DE',
-                        charcoal: '#1A1A1A',
-                        bronze: '#8C7355',
-                        moody: '#221B1A',
-                        cashmere: '#D9D2C2',
-                        sage: '#D8DFD5',
-                        cypress: '#2B3A2D',
-                        terracotta: '#A65B47',
-                        amber: '#E3A857',
-                        obsidian: '#0D0D0D',
-                        champagne: '#E6C994'
+                        studio: {
+                            // Core Guidelines Palette
+                            espresso: '#432f2d',
+                            iceblue: '#c1dbe9',
+                            butter: '#fdefb4',
+                            cream: '#fcf6ea',
+                            beige: '#d9d2c2',
+                            lightgrey: '#e8e4de',
+                            oxblood: '#5a1d24',
+                            pink: '#fce7f0',
+                            softpink: '#ffd3e0',
+                            olive: '#52451b',
+                            muted: '#7a706b',
+                            // Luxury Additions
+                            travertine: '#f2eae1',
+                            bronze: '#8c6d46',
+                            charcoal: '#1c1b1a',
+                            sagelinen: '#dbe0d7',
+                            cypress: '#2d382e',
+                            terracotta: '#a6523f',
+                            sand: '#e8decb',
+                            obsidian: '#121212',
+                            champagne: '#e6d5b8'
+                        }
                     },
                     fontFamily: {
-                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        /* CSS scroll snapping for full-screen comparison sections */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow-x: hidden;
-        }
-        .scroll-container {
-            height: 100vh;
-            overflow-y: scroll;
+        html {
+            scroll-behavior: smooth;
             scroll-snap-type: y mandatory;
         }
-        .landing-section {
+        .snap-section {
             scroll-snap-align: start;
             scroll-snap-stop: always;
-            height: 100vh;
-            width: 100%;
         }
-        /* Hide scrollbar for clean UI while keeping scrollability */
-        .scroll-container::-webkit-scrollbar {
-            display: none;
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
         }
-        .scroll-container {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
         }
     </style>
 </head>
-<body class="bg-black font-sans antialiased selection:bg-stone-300 selection:text-stone-900">
-
-    <!-- Floating Palette Selector Switcher Bar (10 Options) -->
-    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-4xl bg-black/90 backdrop-blur-md border border-white/10 rounded-full px-2 py-1.5 shadow-2xl flex items-center justify-between gap-1 overflow-x-auto text-[10px] sm:text-xs font-medium tracking-wider text-stone-300">
-        <a href="#option-1" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">01 Cream</a>
-        <a href="#option-2" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">02 Espresso</a>
-        <a href="#option-3" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">03 Olive</a>
-        <a href="#option-4" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">04 Butter</a>
-        <a href="#option-5" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">05 Oxblood</a>
-        <a href="#option-6" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">06 Travertine</a>
-        <a href="#option-7" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">07 Charcoal</a>
-        <a href="#option-8" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">08 Sage</a>
-        <a href="#option-9" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">09 Terracotta</a>
-        <a href="#option-10" class="whitespace-nowrap px-2.5 py-1.5 rounded-full transition-all duration-200 hover:bg-white/15 hover:text-white">10 Obsidian</a>
-    </div>
-
-    <!-- Main Scroll Container -->
-    <div class="scroll-container">
-
-        <!-- ================================================================= -->
-        <!-- OPTION 01: WARM CREAM (#FCF6EA) + ESPRESSO (#432F2D) -->
-        <!-- ================================================================= -->
-        <section id="option-1" class="landing-section bg-cream text-espresso flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-espresso/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-espresso/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-espresso/10 border border-espresso/20 text-espresso px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 01 • Warm Cream
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-espresso pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-espresso/80 font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-espresso/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-espresso text-cream font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-oxblood hover:text-white transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Modular Environments</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/80 border border-espresso/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-espresso/60 font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-espresso/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 02: DARK ESPRESSO (#432F2D) + CREAM (#FCF6EA) -->
-        <!-- ================================================================= -->
-        <section id="option-2" class="landing-section bg-espresso text-cream flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cream/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-cream/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-cream/10 border border-cream/20 text-cream px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 02 • Dark Espresso
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-cream pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-iceblue font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cream/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-iceblue text-espresso font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-butter transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Modular Environments</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/5 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cream/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 03: OILY OLIVE (#52451B) + ICE BLUE (#C1DBE9) -->
-        <!-- ================================================================= -->
-        <section id="option-3" class="landing-section bg-olive text-cream flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cream/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-cream/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-cream/10 border border-cream/20 text-cream px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 03 • Oily Olive
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-iceblue pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-butter font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cream/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-butter text-olive font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-cream transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Modular Environments</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-butter font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cream/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 04: SOFT BUTTER (#FDEFB4) + ESPRESSO (#432F2D) -->
-        <!-- ================================================================= -->
-        <section id="option-4" class="landing-section bg-butter text-espresso flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-espresso/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-espresso/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-espresso/10 border border-espresso/20 text-espresso px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 04 • Soft Butter
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-espresso pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-oxblood font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-espresso/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-espresso text-butter font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-oxblood hover:text-white transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Modular Environments</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-cream/90 border border-espresso/15 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-oxblood font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-espresso mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-espresso/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-espresso/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 05: DEEP OXBLOOD (#5A1D24) + SOFT PINK (#FFD3E0) -->
-        <!-- ================================================================= -->
-        <section id="option-5" class="landing-section bg-oxblood text-softpink flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-softpink/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-softpink/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-softpink/10 border border-softpink/20 text-softpink px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 05 • Deep Oxblood
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-softpink pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-iceblue font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-softpink/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-iceblue text-espresso font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-softpink hover:text-oxblood transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-black/20 border border-softpink/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-softpink mb-1">Modular Environments</h3>
-                        <p class="text-xs text-softpink/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-black/20 border border-softpink/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-softpink mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-softpink/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-black/20 border border-softpink/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-iceblue font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-softpink mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-softpink/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-softpink/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 06: TRAVERTINE (#E8E4DE) + CHARCOAL (#1A1A1A) + BRONZE -->
-        <!-- ================================================================= -->
-        <section id="option-6" class="landing-section bg-travertine text-charcoal flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-charcoal/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-charcoal/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-charcoal/10 border border-charcoal/20 text-charcoal px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 06 • Travertine
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-charcoal pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-bronze font-semibold pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-charcoal/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-charcoal text-travertine font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-bronze hover:text-white transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/80 border border-charcoal/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-bronze font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-charcoal mb-1">Modular Environments</h3>
-                        <p class="text-xs text-charcoal/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/80 border border-charcoal/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-bronze font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-charcoal mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-charcoal/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/80 border border-charcoal/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-bronze font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-charcoal mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-charcoal/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-charcoal/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 07: CHARCOAL ESPRESSO (#221B1A) + CASHMERE (#D9D2C2) -->
-        <!-- ================================================================= -->
-        <section id="option-7" class="landing-section bg-moody text-cashmere flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cashmere/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-cashmere/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-cashmere/10 border border-cashmere/20 text-cashmere px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 07 • Charcoal Espresso
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-cashmere pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-cashmere/80 font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cashmere/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-cashmere text-moody font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/5 border border-cashmere/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cashmere/60 font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-cashmere mb-1">Modular Environments</h3>
-                        <p class="text-xs text-cashmere/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/5 border border-cashmere/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cashmere/60 font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-cashmere mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-cashmere/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/5 border border-cashmere/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cashmere/60 font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-cashmere mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-cashmere/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cashmere/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 08: SAGE LINEN (#D8DFD5) + CYPRESS GREEN (#2B3A2D) -->
-        <!-- ================================================================= -->
-        <section id="option-8" class="landing-section bg-sage text-cypress flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cypress/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-cypress/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-cypress/10 border border-cypress/20 text-cypress px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 08 • Sage Linen
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-cypress pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-cypress/80 font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cypress/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-cypress text-sage font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-black hover:text-white transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/80 border border-cypress/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cypress/60 font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-cypress mb-1">Modular Environments</h3>
-                        <p class="text-xs text-cypress/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/80 border border-cypress/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cypress/60 font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-cypress mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-cypress/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/80 border border-cypress/10 p-5 rounded-2xl shadow-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-cypress/60 font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-cypress mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-cypress/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cypress/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 09: TERRACOTTA (#A65B47) + CREAM (#FCF6EA) -->
-        <!-- ================================================================= -->
-        <section id="option-9" class="landing-section bg-terracotta text-cream flex flex-col justify-between py-6 px-6 sm:px-12 relative border-b border-cream/10">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-cream/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-cream/10 border border-cream/20 text-cream px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 09 • Terracotta Clay
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-cream pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-amber font-semibold pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-cream/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-cream text-terracotta font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-amber hover:text-black transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-amber font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Modular Environments</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-amber font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-black/20 border border-cream/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-amber font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-cream mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-cream/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-cream/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-
-        <!-- ================================================================= -->
-        <!-- OPTION 10: PURE OBSIDIAN (#0D0D0D) + CHAMPAGNE GOLD (#E6C994) -->
-        <!-- ================================================================= -->
-        <section id="option-10" class="landing-section bg-obsidian text-champagne flex flex-col justify-between py-6 px-6 sm:px-12 relative">
-            <header class="w-full max-w-6xl mx-auto flex justify-between items-center text-xs tracking-widest pt-2">
-                <span class="font-medium text-champagne/70 uppercase text-[10px] sm:text-xs tracking-[0.2em]">Architectural Spatial Systems & Furniture</span>
-                <span class="bg-champagne/10 border border-champagne/20 text-champagne px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase">
-                    Option 10 • Obsidian Gold
-                </span>
-            </header>
-
-            <main class="w-full max-w-5xl mx-auto my-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-                <div class="space-y-1">
-                    <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-[0.18em] uppercase text-champagne pl-[0.18em] leading-none">
-                        MERGE
-                    </h1>
-                    <p class="text-xs sm:text-sm md:text-base uppercase tracking-[0.45em] text-champagne/80 font-medium pt-2 pl-[0.45em]">
-                        DESIGN STUDIO
-                    </p>
-                </div>
-
-                <p class="max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-champagne/90">
-                    Architectural space, bespoke furniture systems, and timeless materiality curated for global interiors.
-                </p>
-
-                <div>
-                    <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-champagne text-obsidian font-semibold text-xs uppercase tracking-[0.25em] px-8 py-3.5 rounded-full hover:bg-white hover:text-black transition-colors duration-300 shadow-md">
-                        Inquire Directly
-                    </a>
-                </div>
-
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-left">
-                    <div class="bg-white/5 border border-champagne/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-champagne/60 font-semibold mb-1">01 / Spatial Architecture</p>
-                        <h3 class="text-base font-medium text-champagne mb-1">Modular Environments</h3>
-                        <p class="text-xs text-champagne/70 leading-relaxed">Integrated interior architecture celebrating floating volumes, light, and natural spatial flow.</p>
-                    </div>
-                    <div class="bg-white/5 border border-champagne/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-champagne/60 font-semibold mb-1">02 / Furniture Systems</p>
-                        <h3 class="text-base font-medium text-champagne mb-1">Bespoke Joinery</h3>
-                        <p class="text-xs text-champagne/70 leading-relaxed">Custom furniture collections, modular wall architectures, and precision-engineered millwork.</p>
-                    </div>
-                    <div class="bg-white/5 border border-champagne/15 p-5 rounded-2xl backdrop-blur-sm">
-                        <p class="text-[10px] uppercase tracking-widest text-champagne/60 font-semibold mb-1">03 / Materiality & Atmosphere</p>
-                        <h3 class="text-base font-medium text-champagne mb-1">Curated Furnishings</h3>
-                        <p class="text-xs text-champagne/70 leading-relaxed">Rare stone, rich timber, tactile metals, and bespoke lighting curated for refined residences.</p>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-wider text-champagne/60 pb-2 gap-2">
-                <p>© 2026 MERGE DESIGN STUDIO • All rights reserved</p>
-                <p>@studiomerge_ • hello@thestudiomerge.com</p>
-            </footer>
-        </section>
-
-    </div>
-
-</body>
-</html>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased overflow-x-hidden selection:bg-studio-iceblue selection:text-studio-espresso">
+
+    <!-- FLOATING PALETTE SWITCHER BAR -->
+    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-black/85 backdrop-blur-md border border-white/10 rounded-full px-4 py-2.5 shadow-2xl flex items-center gap-2 max-w-[95vw] overflow-x-auto no-scrollbar">
+        <span class="text-[9px] uppercase tracking-widest text-stone-400 font-bold pr-2 border-r border-white/10 whitespace-nowrap">Palettes</span>
+        <div class="flex items-center gap-1.5">
+            <a href="#opt-01" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-cream text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">01 Cream</a>
+            <a href="#opt-02" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-espresso text-studio-cream font-bold hover:scale-105 transition-transform whitespace-nowrap">02 Espresso</a>
+            <a href="#opt-03" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-olive text-studio-iceblue font-bold hover:scale-105 transition-transform whitespace-nowrap">03 Olive</a>
+            <a href="#opt-04" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-butter text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">04 Butter</a>
+            <a href="#opt-05" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-oxblood text-studio-softpink font-bold hover:scale-105 transition-transform whitespace-nowrap">05 Oxblood</a>
+            <a href="#opt-06" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-travertine text-studio-bronze font-bold hover:scale-105 transition-transform whitespace-nowrap">06 Travertine</a>
+            <a href="#opt-07" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-charcoal text-studio-beige font-bold hover:scale-105 transition-transform whitespace-nowrap">07 Charcoal</a>
+            <a href="#opt-08" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sagelinen text-studio-cypress font-bold hover:scale-105 transition-transform whitespace-nowrap">08 Sage</a>
+            <a href="#opt-09" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-terracotta text-studio-sand font-bold hover:scale-105 transition-transform whitespace-nowrap">09 Terracotta</a>
+            <a href="#opt-10" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-obsidian text-studio-champagne font-bold hover:scale-105 transition-transform whitespace-nowrap">10 Obsidian</a>
+        </div>
+    </nav>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 01: WARM CREAM & ESPRESSO (ORIGINAL) -->
+    <!-- ========================================== -->
+    <section id="opt-01" class="snap-section h-screen w-full relative bg-studio-cream text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        
+        <!-- Header -->
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.3em] uppercase opacity-70">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-espresso text-studio-cream text-[9px] font-bold px-3 py-1 rounded-full">Option 01 • Original Cream</span>
+            <span>Est. 2026</span>
+        </header>
+
+        <!-- Center Branding (Artistic M Logo) -->
+        <main class="max-w-5xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto">
+            <!-- Custom SVG Wordmark with Signature Artistic M -->
+            <div class="w-full max-w-xs sm:max-w-md md:max-w-lg mb-2">
+                <svg viewBox="0 0 450 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-espresso fill-current">
+                    <!-- Artistic 'M' with sweeping left arch -->
+                    <path d="M10 80 C 10 30, 28 10, 48 10 C 62 10, 72 22, 78 36 L 98 80 L 118 36 C 124 22, 134 10, 148 10 L 148 80" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Clean geometric 'E' -->
+                    <path d="M180 15 L 230 15 M 180 15 L 180 75 M 180 45 L 220 45 M 180 75 L 230 75" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Clean geometric 'R' -->
+                    <path d="M255 75 L 255 15 L 290 15 C 310 15, 310 45, 290 45 L 255 45 M 285 45 L 315 75" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Clean geometric 'G' -->
+                    <path d="M380 28 C 370 15
