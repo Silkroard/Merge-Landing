@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>MERGE DESIGN STUDIO | Brand Palette Showcase</title>
+    <title>MERGE DESIGN STUDIO</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,20 +13,16 @@
                 extend: {
                     colors: {
                         studio: {
-                            // Core Brand Palette
+                            // Core Colors
                             cream: '#fcf6ea',
                             espresso: '#432f2d',
                             olive: '#52451b',
                             butter: '#fdefb4',
                             iceblue: '#c1dbe9',
-                            oxblood: '#5a1d24',
-                            // Light & Tan Additions
-                            softpink: '#ffd3e0',
+                            burgundy: '#5a1d24',
+                            babypink: '#ffd3e0',
+                            babyblue: '#d4e6f1',
                             warmtan: '#d9c5b2',
-                            travertine: '#f4ebe1',
-                            sand: '#eadbce',
-                            sagelinen: '#e1e6df',
-                            darkolive: '#383013',
                             lightgrey: '#e8e4de'
                         }
                     },
@@ -58,30 +54,27 @@
 <body class="bg-stone-950 text-stone-100 font-sans antialiased overflow-x-hidden selection:bg-studio-iceblue selection:text-studio-espresso">
 
     <!-- FLOATING BOTTOM NAVIGATION SWITCHER -->
-    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-black/90 backdrop-blur-md border border-white/10 rounded-full px-4 py-2.5 shadow-2xl flex items-center gap-2 max-w-[92vw] overflow-x-auto no-scrollbar">
-        <span class="text-[9px] uppercase tracking-widest text-stone-400 font-bold pr-2 border-r border-white/15 whitespace-nowrap">Palettes</span>
-        <div class="flex items-center gap-1.5">
-            <a href="#opt-01" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-cream text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">01 Cream</a>
-            <a href="#opt-02" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-espresso text-studio-cream font-bold hover:scale-105 transition-transform whitespace-nowrap">02 Espresso</a>
-            <a href="#opt-03" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-olive text-studio-iceblue font-bold hover:scale-105 transition-transform whitespace-nowrap">03 Olive</a>
-            <a href="#opt-04" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-butter text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">04 Butter</a>
-            <a href="#opt-05" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-softpink text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">05 Blush Pink</a>
-            <a href="#opt-06" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-warmtan text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">06 Warm Tan</a>
-            <a href="#opt-07" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-travertine text-studio-olive font-bold hover:scale-105 transition-transform whitespace-nowrap">07 Travertine</a>
-            <a href="#opt-08" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sand text-studio-oxblood font-bold hover:scale-105 transition-transform whitespace-nowrap">08 Sand</a>
-            <a href="#opt-09" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sagelinen text-studio-darkolive font-bold hover:scale-105 transition-transform whitespace-nowrap">09 Sage Linen</a>
-            <a href="#opt-10" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-iceblue text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">10 Ice Blue</a>
-        </div>
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-black/85 backdrop-blur-md border border-white/10 rounded-full px-4 py-2.5 shadow-2xl flex items-center gap-1.5 max-w-[92vw] overflow-x-auto no-scrollbar">
+        <a href="#section-01" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-cream text-studio-espresso font-semibold hover:scale-105 transition-transform whitespace-nowrap">01</a>
+        <a href="#section-02" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-espresso text-studio-cream font-semibold hover:scale-105 transition-transform whitespace-nowrap">02</a>
+        <a href="#section-03" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-olive text-studio-iceblue font-semibold hover:scale-105 transition-transform whitespace-nowrap">03</a>
+        <a href="#section-04" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-butter text-studio-espresso font-semibold hover:scale-105 transition-transform whitespace-nowrap">04</a>
+        <a href="#section-05" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-babypink text-studio-burgundy font-semibold hover:scale-105 transition-transform whitespace-nowrap">05</a>
+        <a href="#section-06" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-babyblue text-studio-burgundy font-semibold hover:scale-105 transition-transform whitespace-nowrap">06</a>
+        <a href="#section-07" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-warmtan text-studio-espresso font-semibold hover:scale-105 transition-transform whitespace-nowrap">07</a>
+        <a href="#section-08" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-cream text-studio-olive font-semibold hover:scale-105 transition-transform whitespace-nowrap">08</a>
+        <a href="#section-09" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-burgundy text-studio-babypink font-semibold hover:scale-105 transition-transform whitespace-nowrap">09</a>
+        <a href="#section-10" class="text-[10px] tracking-wider px-3 py-1 rounded-full bg-studio-babyblue text-studio-olive font-semibold hover:scale-105 transition-transform whitespace-nowrap">10</a>
     </nav>
 
 
     <!-- ========================================== -->
-    <!-- OPTION 01: CREAM & ESPRESSO (ORIGINAL 1)   -->
+    <!-- SECTION 01: CREAM & ESPRESSO               -->
     <!-- ========================================== -->
-    <section id="opt-01" class="snap-section h-screen w-full relative bg-studio-cream text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-01" class="snap-section h-screen w-full relative bg-studio-cream text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-espresso text-studio-cream text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 01 • Original Cream</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -97,7 +90,7 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-white font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-burgundy text-white font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
@@ -120,12 +113,12 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 02: ESPRESSO & CREAM (ORIGINAL 2)   -->
+    <!-- SECTION 02: ESPRESSO & CREAM               -->
     <!-- ========================================== -->
-    <section id="opt-02" class="snap-section h-screen w-full relative bg-studio-espresso text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-02" class="snap-section h-screen w-full relative bg-studio-espresso text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-cream text-studio-espresso text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 02 • Original Espresso</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -164,12 +157,12 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 03: OILY OLIVE & ICE BLUE (ORIG 3)  -->
+    <!-- SECTION 03: OILY GREEN & ICE BLUE          -->
     <!-- ========================================== -->
-    <section id="opt-03" class="snap-section h-screen w-full relative bg-studio-olive text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-03" class="snap-section h-screen w-full relative bg-studio-olive text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-iceblue text-studio-espresso text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 03 • Original Olive</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -208,12 +201,12 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 04: SOFT BUTTER & ESPRESSO (ORIG 4) -->
+    <!-- SECTION 04: SOFT BUTTER & ESPRESSO        -->
     <!-- ========================================== -->
-    <section id="opt-04" class="snap-section h-screen w-full relative bg-studio-butter text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-04" class="snap-section h-screen w-full relative bg-studio-butter text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-espresso text-studio-butter text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 04 • Original Butter</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -229,7 +222,7 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-butter font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-butter font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-burgundy hover:text-white transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
@@ -252,12 +245,100 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 05: BLUSH PINK & ESPRESSO (LIGHT 1) -->
+    <!-- SECTION 05: BABY PINK & BURGUNDY           -->
     <!-- ========================================== -->
-    <section id="opt-05" class="snap-section h-screen w-full relative bg-studio-softpink text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-05" class="snap-section h-screen w-full relative bg-studio-babypink text-studio-burgundy flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-espresso text-studio-softpink text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 05 • Blush Pink</span>
+            <span>Est. 2026</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-burgundy uppercase mb-2 pl-[0.2em]">
+                MERGE
+            </h1>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-burgundy text-studio-babypink font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso hover:text-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-burgundy/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION 06: BABY BLUE & BURGUNDY           -->
+    <!-- ========================================== -->
+    <section id="section-06" class="snap-section h-screen w-full relative bg-studio-babyblue text-studio-burgundy flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span>Est. 2026</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-burgundy uppercase mb-2 pl-[0.2em]">
+                MERGE
+            </h1>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-burgundy text-studio-babyblue font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso hover:text-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-burgundy/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION 07: WARM TAN & ESPRESSO            -->
+    <!-- ========================================== -->
+    <section id="section-07" class="snap-section h-screen w-full relative bg-studio-warmtan text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -273,7 +354,7 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-softpink font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-warmtan font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-burgundy hover:text-white transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
@@ -296,56 +377,12 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 06: WARM TAN & ESPRESSO (LIGHT 2)   -->
+    <!-- SECTION 08: SOFT CREAM & OILY GREEN        -->
     <!-- ========================================== -->
-    <section id="opt-06" class="snap-section h-screen w-full relative bg-studio-warmtan text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-08" class="snap-section h-screen w-full relative bg-studio-cream text-studio-olive flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-espresso text-studio-warmtan text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 06 • Warm Tan</span>
-        </header>
-
-        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-espresso uppercase mb-2 pl-[0.2em]">
-                MERGE
-            </h1>
-            
-            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
-                DESIGN STUDIO
-            </p>
-
-            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
-                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
-            </p>
-
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-warmtan font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
-                Inquire Directly
-            </a>
-        </main>
-
-        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-espresso/15 pt-4 pb-12 sm:pb-4">
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
-                <h3 class="text-xs font-semibold">Modular Environments</h3>
-            </div>
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
-                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
-            </div>
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
-                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
-            </div>
-        </footer>
-    </section>
-
-
-    <!-- ========================================== -->
-    <!-- OPTION 07: TRAVERTINE & OLIVE (LIGHT 3)    -->
-    <!-- ========================================== -->
-    <section id="opt-07" class="snap-section h-screen w-full relative bg-studio-travertine text-studio-olive flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
-            <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-olive text-studio-travertine text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 07 • Travertine</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
@@ -361,7 +398,7 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-olive text-studio-travertine font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-olive text-studio-cream font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso hover:text-white transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
@@ -384,16 +421,16 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 08: DESERT SAND & OXBLOOD (LIGHT 4) -->
+    <!-- SECTION 09: BURGUNDY & BABY PINK           -->
     <!-- ========================================== -->
-    <section id="opt-08" class="snap-section h-screen w-full relative bg-studio-sand text-studio-oxblood flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-09" class="snap-section h-screen w-full relative bg-studio-burgundy text-studio-babypink flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-oxblood text-studio-sand text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 08 • Warm Sand</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-oxblood uppercase mb-2 pl-[0.2em]">
+            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-babypink uppercase mb-2 pl-[0.2em]">
                 MERGE
             </h1>
             
@@ -405,12 +442,12 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-studio-sand font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-babypink text-studio-burgundy font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-white transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
 
-        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-oxblood/15 pt-4 pb-12 sm:pb-4">
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-babypink/15 pt-4 pb-12 sm:pb-4">
             <div>
                 <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
                 <h3 class="text-xs font-semibold">Modular Environments</h3>
@@ -428,16 +465,16 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 09: SAGE LINEN & DARK OLIVE (LIGHT 5)-->
+    <!-- SECTION 10: BABY BLUE & OILY GREEN         -->
     <!-- ========================================== -->
-    <section id="opt-09" class="snap-section h-screen w-full relative bg-studio-sagelinen text-studio-darkolive flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+    <section id="section-10" class="snap-section h-screen w-full relative bg-studio-babyblue text-studio-olive flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-darkolive text-studio-sagelinen text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 09 • Sage Linen</span>
+            <span>Est. 2026</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-darkolive uppercase mb-2 pl-[0.2em]">
+            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-olive uppercase mb-2 pl-[0.2em]">
                 MERGE
             </h1>
             
@@ -449,56 +486,12 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-darkolive text-studio-sagelinen font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-olive transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-olive text-studio-babyblue font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso hover:text-white transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
 
-        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-darkolive/15 pt-4 pb-12 sm:pb-4">
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
-                <h3 class="text-xs font-semibold">Modular Environments</h3>
-            </div>
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
-                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
-            </div>
-            <div>
-                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
-                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
-            </div>
-        </footer>
-    </section>
-
-
-    <!-- ========================================== -->
-    <!-- OPTION 10: ICE BLUE & ESPRESSO (LIGHT 6)   -->
-    <!-- ========================================== -->
-    <section id="opt-10" class="snap-section h-screen w-full relative bg-studio-iceblue text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
-            <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-espresso text-studio-iceblue text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 10 • Ice Blue</span>
-        </header>
-
-        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-studio-espresso uppercase mb-2 pl-[0.2em]">
-                MERGE
-            </h1>
-            
-            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
-                DESIGN STUDIO
-            </p>
-
-            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
-                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
-            </p>
-
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-iceblue font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
-                Inquire Directly
-            </a>
-        </main>
-
-        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-espresso/15 pt-4 pb-12 sm:pb-4">
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-olive/15 pt-4 pb-12 sm:pb-4">
             <div>
                 <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
                 <h3 class="text-xs font-semibold">Modular Environments</h3>
