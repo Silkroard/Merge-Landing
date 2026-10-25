@@ -13,28 +13,20 @@
                 extend: {
                     colors: {
                         studio: {
-                            // Core Brand Palette (Exact Hex Codes)
-                            espresso: '#432f2d',
-                            iceblue: '#c1dbe9',
-                            butter: '#fdefb4',
+                            // 4 Original Brand Colors
                             cream: '#fcf6ea',
-                            beige: '#d9d2c2',
-                            lightgrey: '#e8e4de',
-                            oxblood: '#5a1d24',
-                            pink: '#fce7f0',
-                            softpink: '#ffd3e0',
+                            espresso: '#432f2d',
                             olive: '#52451b',
-                            muted: '#7a706b',
-                            // Luxury Additions
-                            travertine: '#f2eae1',
-                            bronze: '#8c6d46',
-                            charcoal: '#1c1b1a',
-                            sagelinen: '#dbe0d7',
-                            cypress: '#2d382e',
-                            terracotta: '#a6523f',
-                            sand: '#e8decb',
-                            obsidian: '#121212',
-                            champagne: '#e6d5b8'
+                            butter: '#fdefb4',
+                            // Accent & 6 New Luxury Palettes
+                            iceblue: '#c1dbe9',
+                            oxblood: '#5a1d24',
+                            softpink: '#ffd3e0',
+                            sage: '#d8e0d5',
+                            darkolive: '#383013',
+                            sand: '#e6dccb',
+                            charcoal: '#22201f',
+                            lightgrey: '#e8e4de'
                         }
                     },
                     fontFamily: {
@@ -53,7 +45,6 @@
             scroll-snap-align: start;
             scroll-snap-stop: always;
         }
-        /* Hide scrollbars for slick mobile viewing */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -73,45 +64,39 @@
             <a href="#opt-02" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-espresso text-studio-cream font-bold hover:scale-105 transition-transform whitespace-nowrap">02 Espresso</a>
             <a href="#opt-03" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-olive text-studio-iceblue font-bold hover:scale-105 transition-transform whitespace-nowrap">03 Olive</a>
             <a href="#opt-04" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-butter text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">04 Butter</a>
-            <a href="#opt-05" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-oxblood text-studio-softpink font-bold hover:scale-105 transition-transform whitespace-nowrap">05 Oxblood</a>
-            <a href="#opt-06" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-travertine text-studio-bronze font-bold hover:scale-105 transition-transform whitespace-nowrap">06 Travertine</a>
-            <a href="#opt-07" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-charcoal text-studio-beige font-bold hover:scale-105 transition-transform whitespace-nowrap">07 Charcoal</a>
-            <a href="#opt-08" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sagelinen text-studio-cypress font-bold hover:scale-105 transition-transform whitespace-nowrap">08 Sage</a>
-            <a href="#opt-09" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-terracotta text-studio-sand font-bold hover:scale-105 transition-transform whitespace-nowrap">09 Terracotta</a>
-            <a href="#opt-10" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-obsidian text-studio-champagne font-bold hover:scale-105 transition-transform whitespace-nowrap">10 Obsidian</a>
+            <a href="#opt-05" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-oxblood text-studio-cream font-bold hover:scale-105 transition-transform whitespace-nowrap">05 Oxblood</a>
+            <a href="#opt-06" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-softpink text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">06 Blush Pink</a>
+            <a href="#opt-07" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-iceblue text-studio-espresso font-bold hover:scale-105 transition-transform whitespace-nowrap">07 Ice Blue</a>
+            <a href="#opt-08" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sage text-studio-darkolive font-bold hover:scale-105 transition-transform whitespace-nowrap">08 Sage</a>
+            <a href="#opt-09" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-sand text-studio-oxblood font-bold hover:scale-105 transition-transform whitespace-nowrap">09 Sand</a>
+            <a href="#opt-10" class="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full bg-studio-charcoal text-studio-iceblue font-bold hover:scale-105 transition-transform whitespace-nowrap">10 Charcoal</a>
         </div>
     </nav>
 
-    <!-- REUSABLE MERGE LOGO TEMPLATE -->
-    <!-- (SVG designed to fit 100% container width safely) -->
-
 
     <!-- ========================================== -->
-    <!-- OPTION 01: CREAM & ESPRESSO (ORIGINAL) -->
+    <!-- OPTION 01: CREAM & ESPRESSO (ORIGINAL 1)   -->
     <!-- ========================================== -->
     <section id="opt-01" class="snap-section h-screen w-full relative bg-studio-cream text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        
-        <!-- Header -->
         <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
             <span>Spatial Architecture & Furniture</span>
             <span class="bg-studio-espresso text-studio-cream text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 01 • Original Cream</span>
         </header>
 
-        <!-- Center Hero -->
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <!-- Custom Artistic MERGE Logo -->
-            <div class="w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-3">
-                <svg viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-espresso fill-current">
-                    <!-- Curved Artistic M -->
-                    <path d="M 20 95 C 15 50, 35 15, 65 15 C 85 15, 95 35, 105 55 C 115 35, 125 15, 145 15 C 175 15, 195 50, 190 95 L 165 95 C 170 60, 155 35, 145 35 C 135 35, 125 55, 115 80 L 95 80 C 85 55, 75 35, 65 35 C 55 35, 40 60, 45 95 Z"/>
-                    <!-- Letter E -->
-                    <path d="M 215 20 H 260 V 38 H 238 V 51 H 255 V 68 H 238 V 82 H 260 V 95 H 215 Z"/>
-                    <!-- Letter R -->
-                    <path d="M 275 20 H 315 C 330 20, 340 30, 340 43 C 340 55, 330 63, 315 63 H 298 V 95 H 275 Z M 298 37 V 48 H 312 C 318 48, 322 45, 322 42.5 C 322 40, 318 37, 312 37 Z M 315 63 L 340 95 H 315 L 295 68 Z"/>
-                    <!-- Letter G -->
-                    <path d="M 395 20 C 365 20, 350 40, 350 57.5 C 350 75, 365 95, 395 95 C 412 95, 422 86, 425 72 H 395 V 56 H 445 V 90 C 432 98, 415 105, 395 105 C 350 105, 328 77, 328 57.5 C 328 35, 352 10, 395 10 C 418 10, 435 18, 445 28 L 430 42 C 422 30, 410 20, 395 20 Z"/>
-                    <!-- Letter E -->
-                    <path d="M 450 20 H 495 V 38 H 473 V 51 H 490 V 68 H 473 V 82 H 495 V 95 H 450 Z"/>
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <!-- EXACT VECTOR TRACE OF MERGE LOGO -->
+                    <!-- M -->
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <!-- E -->
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <!-- R -->
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <!-- G -->
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <!-- E -->
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
                 </svg>
             </div>
             
@@ -128,7 +113,6 @@
             </a>
         </main>
 
-        <!-- Footer Grid -->
         <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-espresso/15 pt-4 pb-12 sm:pb-4">
             <div>
                 <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
@@ -147,23 +131,22 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 02: ESPRESSO & CREAM (ORIGINAL) -->
+    <!-- OPTION 02: ESPRESSO & CREAM (ORIGINAL 2)   -->
     <!-- ========================================== -->
     <section id="opt-02" class="snap-section h-screen w-full relative bg-studio-espresso text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        
         <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
             <span>Spatial Architecture & Furniture</span>
             <span class="bg-studio-cream text-studio-espresso text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 02 • Original Espresso</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <div class="w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-3">
-                <svg viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-cream fill-current">
-                    <path d="M 20 95 C 15 50, 35 15, 65 15 C 85 15, 95 35, 105 55 C 115 35, 125 15, 145 15 C 175 15, 195 50, 190 95 L 165 95 C 170 60, 155 35, 145 35 C 135 35, 125 55, 115 80 L 95 80 C 85 55, 75 35, 65 35 C 55 35, 40 60, 45 95 Z"/>
-                    <path d="M 215 20 H 260 V 38 H 238 V 51 H 255 V 68 H 238 V 82 H 260 V 95 H 215 Z"/>
-                    <path d="M 275 20 H 315 C 330 20, 340 30, 340 43 C 340 55, 330 63, 315 63 H 298 V 95 H 275 Z M 298 37 V 48 H 312 C 318 48, 322 45, 322 42.5 C 322 40, 318 37, 312 37 Z M 315 63 L 340 95 H 315 L 295 68 Z"/>
-                    <path d="M 395 20 C 365 20, 350 40, 350 57.5 C 350 75, 365 95, 395 95 C 412 95, 422 86, 425 72 H 395 V 56 H 445 V 90 C 432 98, 415 105, 395 105 C 350 105, 328 77, 328 57.5 C 328 35, 352 10, 395 10 C 418 10, 435 18, 445 28 L 430 42 C 422 30, 410 20, 395 20 Z"/>
-                    <path d="M 450 20 H 495 V 38 H 473 V 51 H 490 V 68 H 473 V 82 H 495 V 95 H 450 Z"/>
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
                 </svg>
             </div>
             
@@ -198,23 +181,22 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 03: OILY OLIVE & ICE BLUE (ORIGINAL) -->
+    <!-- OPTION 03: OILY OLIVE & ICE BLUE (ORIG 3)  -->
     <!-- ========================================== -->
     <section id="opt-03" class="snap-section h-screen w-full relative bg-studio-olive text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        
         <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
             <span>Spatial Architecture & Furniture</span>
             <span class="bg-studio-iceblue text-studio-espresso text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 03 • Original Olive</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <div class="w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-3">
-                <svg viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-iceblue fill-current">
-                    <path d="M 20 95 C 15 50, 35 15, 65 15 C 85 15, 95 35, 105 55 C 115 35, 125 15, 145 15 C 175 15, 195 50, 190 95 L 165 95 C 170 60, 155 35, 145 35 C 135 35, 125 55, 115 80 L 95 80 C 85 55, 75 35, 65 35 C 55 35, 40 60, 45 95 Z"/>
-                    <path d="M 215 20 H 260 V 38 H 238 V 51 H 255 V 68 H 238 V 82 H 260 V 95 H 215 Z"/>
-                    <path d="M 275 20 H 315 C 330 20, 340 30, 340 43 C 340 55, 330 63, 315 63 H 298 V 95 H 275 Z M 298 37 V 48 H 312 C 318 48, 322 45, 322 42.5 C 322 40, 318 37, 312 37 Z M 315 63 L 340 95 H 315 L 295 68 Z"/>
-                    <path d="M 395 20 C 365 20, 350 40, 350 57.5 C 350 75, 365 95, 395 95 C 412 95, 422 86, 425 72 H 395 V 56 H 445 V 90 C 432 98, 415 105, 395 105 C 350 105, 328 77, 328 57.5 C 328 35, 352 10, 395 10 C 418 10, 435 18, 445 28 L 430 42 C 422 30, 410 20, 395 20 Z"/>
-                    <path d="M 450 20 H 495 V 38 H 473 V 51 H 490 V 68 H 473 V 82 H 495 V 95 H 450 Z"/>
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-iceblue fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
                 </svg>
             </div>
             
@@ -249,23 +231,22 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 04: SOFT BUTTER & ESPRESSO (ORIGINAL) -->
+    <!-- OPTION 04: SOFT BUTTER & ESPRESSO (ORIG 4) -->
     <!-- ========================================== -->
     <section id="opt-04" class="snap-section h-screen w-full relative bg-studio-butter text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        
         <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
             <span>Spatial Architecture & Furniture</span>
             <span class="bg-studio-espresso text-studio-butter text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 04 • Original Butter</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <div class="w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-3">
-                <svg viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-espresso fill-current">
-                    <path d="M 20 95 C 15 50, 35 15, 65 15 C 85 15, 95 35, 105 55 C 115 35, 125 15, 145 15 C 175 15, 195 50, 190 95 L 165 95 C 170 60, 155 35, 145 35 C 135 35, 125 55, 115 80 L 95 80 C 85 55, 75 35, 65 35 C 55 35, 40 60, 45 95 Z"/>
-                    <path d="M 215 20 H 260 V 38 H 238 V 51 H 255 V 68 H 238 V 82 H 260 V 95 H 215 Z"/>
-                    <path d="M 275 20 H 315 C 330 20, 340 30, 340 43 C 340 55, 330 63, 315 63 H 298 V 95 H 275 Z M 298 37 V 48 H 312 C 318 48, 322 45, 322 42.5 C 322 40, 318 37, 312 37 Z M 315 63 L 340 95 H 315 L 295 68 Z"/>
-                    <path d="M 395 20 C 365 20, 350 40, 350 57.5 C 350 75, 365 95, 395 95 C 412 95, 422 86, 425 72 H 395 V 56 H 445 V 90 C 432 98, 415 105, 395 105 C 350 105, 328 77, 328 57.5 C 328 35, 352 10, 395 10 C 418 10, 435 18, 445 28 L 430 42 C 422 30, 410 20, 395 20 Z"/>
-                    <path d="M 450 20 H 495 V 38 H 473 V 51 H 490 V 68 H 473 V 82 H 495 V 95 H 450 Z"/>
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
                 </svg>
             </div>
             
@@ -300,23 +281,22 @@
 
 
     <!-- ========================================== -->
-    <!-- OPTION 05: OXBLOOD & SOFT PINK (LUXURY) -->
+    <!-- OPTION 05: OXBLOOD & CREAM (NEW 1)         -->
     <!-- ========================================== -->
-    <section id="opt-05" class="snap-section h-screen w-full relative bg-studio-oxblood text-studio-softpink flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
-        
+    <section id="opt-05" class="snap-section h-screen w-full relative bg-studio-oxblood text-studio-cream flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
         <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
             <span>Spatial Architecture & Furniture</span>
-            <span class="bg-studio-softpink text-studio-oxblood text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 05 • Deep Oxblood</span>
+            <span class="bg-studio-cream text-studio-oxblood text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 05 • Deep Oxblood</span>
         </header>
 
         <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
-            <div class="w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-3">
-                <svg viewBox="0 0 500 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-studio-softpink fill-current">
-                    <path d="M 20 95 C 15 50, 35 15, 65 15 C 85 15, 95 35, 105 55 C 115 35, 125 15, 145 15 C 175 15, 195 50, 190 95 L 165 95 C 170 60, 155 35, 145 35 C 135 35, 125 55, 115 80 L 95 80 C 85 55, 75 35, 65 35 C 55 35, 40 60, 45 95 Z"/>
-                    <path d="M 215 20 H 260 V 38 H 238 V 51 H 255 V 68 H 238 V 82 H 260 V 95 H 215 Z"/>
-                    <path d="M 275 20 H 315 C 330 20, 340 30, 340 43 C 340 55, 330 63, 315 63 H 298 V 95 H 275 Z M 298 37 V 48 H 312 C 318 48, 322 45, 322 42.5 C 322 40, 318 37, 312 37 Z M 315 63 L 340 95 H 315 L 295 68 Z"/>
-                    <path d="M 395 20 C 365 20, 350 40, 350 57.5 C 350 75, 365 95, 395 95 C 412 95, 422 86, 425 72 H 395 V 56 H 445 V 90 C 432 98, 415 105, 395 105 C 350 105, 328 77, 328 57.5 C 328 35, 352 10, 395 10 C 418 10, 435 18, 445 28 L 430 42 C 422 30, 410 20, 395 20 Z"/>
-                    <path d="M 450 20 H 495 V 38 H 473 V 51 H 490 V 68 H 473 V 82 H 495 V 95 H 450 Z"/>
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
                 </svg>
             </div>
             
@@ -328,22 +308,272 @@
                 Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
             </p>
 
-            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-iceblue text-studio-espresso font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-butter transition-colors shadow-sm">
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-cream text-studio-oxblood font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-butter transition-colors shadow-sm">
                 Inquire Directly
             </a>
         </main>
 
-        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-softpink/15 pt-4 pb-12 sm:pb-4">
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-cream/15 pt-4 pb-12 sm:pb-4">
             <div>
-                <p class="text-[9px] uppercase tracking-widest text-studio-iceblue font-semibold mb-0.5">01 / Spatial Architecture</p>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
                 <h3 class="text-xs font-semibold">Modular Environments</h3>
             </div>
             <div>
-                <p class="text-[9px] uppercase tracking-widest text-studio-iceblue font-semibold mb-0.5">02 / Custom Furniture</p>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
                 <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
             </div>
             <div>
-                <p class="text-[9px] uppercase tracking-widest text-studio-iceblue font-semibold mb-0.5">03 / Identity</p>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 06: BLUSH PINK & ESPRESSO (NEW 2)   -->
+    <!-- ========================================== -->
+    <section id="opt-06" class="snap-section h-screen w-full relative bg-studio-softpink text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-espresso text-studio-softpink text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 06 • Blush Pink</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
+                </svg>
+            </div>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-softpink font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-espresso/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 07: ICE BLUE & ESPRESSO (NEW 3)     -->
+    <!-- ========================================== -->
+    <section id="opt-07" class="snap-section h-screen w-full relative bg-studio-iceblue text-studio-espresso flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-espresso text-studio-iceblue text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 07 • Ice Blue</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
+                </svg>
+            </div>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-espresso text-studio-iceblue font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-oxblood hover:text-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-espresso/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 08: SAGE & DARK OLIVE (NEW 4)       -->
+    <!-- ========================================== -->
+    <section id="opt-08" class="snap-section h-screen w-full relative bg-studio-sage text-studio-darkolive flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-darkolive text-studio-sage text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 08 • Earthy Sage</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
+                </svg>
+            </div>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-darkolive text-studio-sage font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-olive hover:text-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-darkolive/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 09: SAND & OXBLOOD (NEW 5)          -->
+    <!-- ========================================== -->
+    <section id="opt-09" class="snap-section h-screen w-full relative bg-studio-sand text-studio-oxblood flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-oxblood text-studio-sand text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 09 • Warm Sand</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
+                </svg>
+            </div>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-oxblood text-studio-sand font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-studio-espresso transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-oxblood/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
+                <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- OPTION 10: CHARCOAL & ICE BLUE (NEW 6)     -->
+    <!-- ========================================== -->
+    <section id="opt-10" class="snap-section h-screen w-full relative bg-studio-charcoal text-studio-iceblue flex flex-col justify-between p-6 sm:p-10 overflow-hidden">
+        <header class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs tracking-[0.25em] uppercase opacity-75 gap-2 pt-2">
+            <span>Spatial Architecture & Furniture</span>
+            <span class="bg-studio-iceblue text-studio-charcoal text-[9px] font-bold px-3 py-1 rounded-full shadow-sm">Option 10 • Muted Charcoal</span>
+        </header>
+
+        <main class="max-w-4xl mx-auto w-full text-center flex flex-col items-center justify-center my-auto px-2">
+            <div class="flex items-center justify-center w-full max-w-[280px] sm:max-w-md md:max-w-lg mb-4">
+                <svg viewBox="0 0 540 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto fill-current">
+                    <path d="M 20 100 L 20 20 L 40 20 C 40 50, 52 75, 78 75 C 104 75, 116 50, 116 20 L 136 20 L 136 100 L 116 100 L 116 38 C 110 65, 96 93, 78 93 C 60 93, 46 65, 40 38 L 40 100 Z"/>
+                    <path d="M 160 20 H 225 V 38 H 182 V 51 H 218 V 69 H 182 V 82 H 225 V 100 H 160 Z"/>
+                    <path d="M 245 20 H 295 C 318 20, 332 32, 332 50 C 332 65, 320 75, 302 78 L 334 100 H 308 L 280 78 H 267 V 100 H 245 Z M 267 37 V 61 H 293 C 307 61, 311 54, 311 50 C 311 44, 305 37, 293 37 Z"/>
+                    <path d="M 390 20 C 352 20, 340 45, 340 60 C 340 78, 354 100, 390 100 C 412 100, 428 92, 434 75 H 392 V 58 H 455 V 93 C 440 108, 418 118, 390 118 C 340 118, 318 85, 318 60 C 318 32, 348 2, 390 2 C 420 2, 442 12, 452 28 L 434 42 C 426 30, 412 20, 390 20 Z"/>
+                    <path d="M 470 20 H 535 V 38 H 492 V 51 H 528 V 69 H 492 V 82 H 535 V 100 H 470 Z"/>
+                </svg>
+            </div>
+            
+            <p class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.45em] sm:tracking-[0.6em] uppercase opacity-80 mb-5">
+                DESIGN STUDIO
+            </p>
+
+            <p class="max-w-md sm:max-w-lg text-xs sm:text-sm font-light leading-relaxed mb-6 opacity-90">
+                Where floating spatial forms, bespoke joinery systems, and architectural curation seamlessly unite into unified tactile environments.
+            </p>
+
+            <a href="mailto:hello@thestudiomerge.com" class="inline-block bg-studio-iceblue text-studio-charcoal font-medium text-[10px] sm:text-xs uppercase tracking-[0.25em] px-7 py-3 rounded-full hover:bg-white transition-colors shadow-sm">
+                Inquire Directly
+            </a>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 text-left border-t border-studio-iceblue/15 pt-4 pb-12 sm:pb-4">
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">01 / Spatial Architecture</p>
+                <h3 class="text-xs font-semibold">Modular Environments</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">02 / Custom Furniture</p>
+                <h3 class="text-xs font-semibold">Bespoke Joinery</h3>
+            </div>
+            <div>
+                <p class="text-[9px] uppercase tracking-widest opacity-60 mb-0.5">03 / Identity</p>
                 <h3 class="text-xs font-semibold">Tactile Brand Systems</h3>
             </div>
         </footer>
